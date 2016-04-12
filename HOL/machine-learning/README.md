@@ -212,13 +212,13 @@ module.
 6.  In the Properties pane, delete the default text in the R Script parameter and enter this script:
 
    ```
-    dataset1 &lt;- maml.mapInputPort(1)
+    dataset1 <- maml.mapInputPort(1)
     
-    data.set&lt;-dataset1\[dataset1\[,21\]==1,\]
+    data.set <- dataset1[dataset1[,21]==1,]
     
-    pos&lt;-dataset1\[dataset1\[,21\]==2,\]
+    pos <- dataset1[dataset1[,21]==2,]
     
-    for (i in 1:5) data.set&lt;-rbind(data.set,pos)
+    for (i in 1:5) data.set <- rbind(data.set,pos)
     
     maml.mapOutputPort("data.set")
    ```
